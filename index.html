@@ -4,28 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Librería del Centro</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Librería del Centro</h1>
-    <nav aria-label="Vistas principales">
-      <ul>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#libros">Libros</a></li>
-        <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#ventas">Ventas</a></li>
-        <li><a href="#historial">Historial</a></li>
+  <header class="site-header">
+    <h1 class="site-header__title">Librería del Centro</h1>
+    <nav class="site-nav" aria-label="Vistas principales">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="#catalogo">Catálogo</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="#libros">Libros</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="#clientes">Clientes</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="#ventas">Ventas</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="#historial">Historial</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="catalogo">
-      <h2>Catálogo</h2>
+    <section id="catalogo" class="view">
+      <h2 class="view__title">Catálogo</h2>
 
-      <label for="busqueda-titulo">Buscar por título</label>
-      <input type="text" id="busqueda-titulo" name="busqueda-titulo">
+      <label class="label" for="busqueda-titulo">Buscar por título</label>
+      <input class="input" type="text" id="busqueda-titulo" name="busqueda-titulo">
 
+      <div class="table-wrapper">
       <table>
         <thead>
           <tr>
@@ -39,39 +41,41 @@
         </thead>
         <tbody id="listado-libros"></tbody>
       </table>
+      </div>
 
-      <p id="mensaje-catalogo-vacio" hidden></p>
-      <p id="mensaje-sin-resultados" hidden></p>
+      <p class="message message--info" id="mensaje-catalogo-vacio" hidden></p>
+      <p class="message message--info" id="mensaje-sin-resultados" hidden></p>
     </section>
 
-    <section id="libros">
-      <h2>Libros</h2>
+    <section id="libros" class="view">
+      <h2 class="view__title">Libros</h2>
 
-      <form id="form-alta-libro" novalidate>
-        <label for="libro-titulo">Título</label>
-        <input type="text" id="libro-titulo" name="titulo">
+      <form class="form" id="form-alta-libro" novalidate>
+        <label class="label" for="libro-titulo">Título</label>
+        <input class="input" type="text" id="libro-titulo" name="titulo">
 
-        <label for="libro-isbn">ISBN</label>
-        <input type="text" id="libro-isbn" name="isbn">
+        <label class="label" for="libro-isbn">ISBN</label>
+        <input class="input" type="text" id="libro-isbn" name="isbn">
 
-        <label for="libro-precio">Precio</label>
-        <input type="text" id="libro-precio" name="precio" inputmode="decimal">
+        <label class="label" for="libro-precio">Precio</label>
+        <input class="input" type="text" id="libro-precio" name="precio" inputmode="decimal">
 
-        <label for="libro-editorial">Editorial</label>
-        <select id="libro-editorial" name="editorial"></select>
+        <label class="label" for="libro-editorial">Editorial</label>
+        <select class="input" id="libro-editorial" name="editorial"></select>
 
-        <label for="libro-genero">Género</label>
-        <select id="libro-genero" name="genero"></select>
+        <label class="label" for="libro-genero">Género</label>
+        <select class="input" id="libro-genero" name="genero"></select>
 
-        <label for="libro-autores">Autores (selección múltiple)</label>
-        <select id="libro-autores" name="autores" multiple></select>
+        <label class="label" for="libro-autores">Autores (selección múltiple)</label>
+        <select class="input" id="libro-autores" name="autores" multiple></select>
 
-        <button type="submit">Registrar libro</button>
+        <button class="btn btn--primario" type="submit">Registrar libro</button>
       </form>
 
-      <ul id="errores-libro" role="alert" hidden></ul>
-      <p id="mensaje-resultado-libro" hidden></p>
+      <ul class="message message--error" id="errores-libro" role="alert" hidden></ul>
+      <p class="message message--success" id="mensaje-resultado-libro" hidden></p>
 
+      <div class="table-wrapper">
       <table>
         <thead>
           <tr>
@@ -85,26 +89,28 @@
         </thead>
         <tbody id="listado-libros-registrados"></tbody>
       </table>
+      </div>
 
-      <p id="mensaje-libros-vacios" hidden></p>
+      <p class="message message--info" id="mensaje-libros-vacios" hidden></p>
     </section>
 
-    <section id="clientes">
-      <h2>Clientes</h2>
+    <section id="clientes" class="view">
+      <h2 class="view__title">Clientes</h2>
 
-      <form id="form-alta-cliente" novalidate>
-        <label for="cliente-nombre">Nombre completo</label>
-        <input type="text" id="cliente-nombre" name="nombre">
+      <form class="form" id="form-alta-cliente" novalidate>
+        <label class="label" for="cliente-nombre">Nombre completo</label>
+        <input class="input" type="text" id="cliente-nombre" name="nombre">
 
-        <label for="cliente-email">Email</label>
-        <input type="email" id="cliente-email" name="email">
+        <label class="label" for="cliente-email">Email</label>
+        <input class="input" type="email" id="cliente-email" name="email">
 
-        <button type="submit">Registrar cliente</button>
+        <button class="btn btn--primario" type="submit">Registrar cliente</button>
       </form>
 
-      <ul id="errores-cliente" role="alert" hidden></ul>
-      <p id="mensaje-resultado-cliente" hidden></p>
+      <ul class="message message--error" id="errores-cliente" role="alert" hidden></ul>
+      <p class="message message--success" id="mensaje-resultado-cliente" hidden></p>
 
+      <div class="table-wrapper">
       <table>
         <thead>
           <tr>
@@ -114,24 +120,26 @@
         </thead>
         <tbody id="listado-clientes"></tbody>
       </table>
+      </div>
 
-      <p id="mensaje-clientes-vacios" hidden></p>
+      <p class="message message--info" id="mensaje-clientes-vacios" hidden></p>
     </section>
 
-    <section id="ventas">
-      <h2>Ventas</h2>
+    <section id="ventas" class="view view--acciones">
+      <h2 class="view__title">Ventas</h2>
 
-      <label for="select-cliente">Cliente</label>
-      <select id="select-cliente" name="cliente"></select>
+      <label class="label" for="select-cliente">Cliente</label>
+      <select class="input" id="select-cliente" name="cliente"></select>
 
-      <label for="select-libro-venta">Libro</label>
-      <select id="select-libro-venta" name="libro"></select>
+      <label class="label" for="select-libro-venta">Libro</label>
+      <select class="input" id="select-libro-venta" name="libro"></select>
 
-      <label for="input-cantidad-venta">Cantidad</label>
-      <input type="text" id="input-cantidad-venta" name="cantidad" inputmode="numeric">
+      <label class="label" for="input-cantidad-venta">Cantidad</label>
+      <input class="input" type="text" id="input-cantidad-venta" name="cantidad" inputmode="numeric">
 
-      <button type="button">Agregar renglón</button>
+      <button class="btn btn--secundario" type="button">Agregar renglón</button>
 
+      <div class="table-wrapper">
       <table id="renglones-venta">
         <thead>
           <tr>
@@ -144,20 +152,22 @@
         </thead>
         <tbody></tbody>
       </table>
-
-      <div id="resumen-venta">
-        <p id="total-venta">Total: 0.00</p>
-        <button type="button">Confirmar venta</button>
       </div>
 
-      <p id="mensaje-resultado-venta" hidden></p>
+      <div class="card" id="resumen-venta">
+        <p class="card__total" id="total-venta">Total: 0.00</p>
+        <button class="btn btn--secundario" type="button">Confirmar venta</button>
+      </div>
+
+      <p class="message message--success" id="mensaje-resultado-venta" hidden></p>
     </section>
 
-    <section id="historial">
-      <h2>Historial</h2>
+    <section id="historial" class="view">
+      <h2 class="view__title">Historial</h2>
 
-      <p id="mensaje-historial-vacio" hidden></p>
+      <p class="message message--info" id="mensaje-historial-vacio" hidden></p>
 
+      <div class="table-wrapper">
       <table id="listado-historial">
         <thead>
           <tr>
@@ -170,14 +180,15 @@
         </thead>
         <tbody></tbody>
       </table>
+      </div>
 
-      <section id="detalle-venta">
+      <section id="detalle-venta" class="card">
         <h3>Detalle de la venta</h3>
       </section>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>Librería del Centro — trabajo de parcial (textos de trabajo editables, PA-07).</p>
   </footer>
 </body>

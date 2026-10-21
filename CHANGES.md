@@ -109,7 +109,7 @@ Paso │ Agente A (Frontend)              │ Agente B │ Agente C
 
 ### [C-02] `css-y-uso-adaptable`
 
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` hecho
 - **Ejercicio**: Ej. 2 — CSS: presentación y uso adaptable — **20 puntos** (coherencia y organización: 8; adaptación: 8; accesibilidad básica: 4)
 - **Scope**: Hoja de estilos externa + diseño adaptable sobre las vistas de C-01
   - `css/styles.css` externo (sin `<style>` embebido ni estilos inline) (US-007, RN-GLO-02)
