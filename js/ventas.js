@@ -375,6 +375,9 @@
     } else if (window.datosLibreria) {
       window.datosLibreria.ventas = [venta];
     }
+    if (window.libreriaApp && window.libreriaApp.persistencia && typeof window.libreriaApp.persistencia.guardar === "function") {
+      window.libreriaApp.persistencia.guardar();
+    }
   }
 
   function limpiarFormularioVenta() {

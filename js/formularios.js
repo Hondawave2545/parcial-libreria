@@ -460,6 +460,9 @@
         if (genero) genero.selectedIndex = 0;
         limpiarSelectMultiple(autores);
         refrescarVistasLibro();
+        if (window.libreriaApp && window.libreriaApp.persistencia && typeof window.libreriaApp.persistencia.guardar === "function") {
+          window.libreriaApp.persistencia.guardar();
+        }
       });
     }
 
@@ -512,6 +515,9 @@
         if (nombre) nombre.value = "";
         if (email) email.value = "";
         refrescarVistasCliente();
+        if (window.libreriaApp && window.libreriaApp.persistencia && typeof window.libreriaApp.persistencia.guardar === "function") {
+          window.libreriaApp.persistencia.guardar();
+        }
       });
     }
   }
