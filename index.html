@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Librería del Centro</title>
+</head>
+<body>
+  <header>
+    <h1>Librería del Centro</h1>
+    <nav aria-label="Vistas principales">
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#libros">Libros</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#ventas">Ventas</a></li>
+        <li><a href="#historial">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="catalogo">
+      <h2>Catálogo</h2>
+
+      <label for="busqueda-titulo">Buscar por título</label>
+      <input type="text" id="busqueda-titulo" name="busqueda-titulo">
+
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>ISBN</th>
+            <th>Editorial</th>
+            <th>Género</th>
+            <th>Autores</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody id="listado-libros"></tbody>
+      </table>
+
+      <p id="mensaje-catalogo-vacio" hidden></p>
+      <p id="mensaje-sin-resultados" hidden></p>
+    </section>
+
+    <section id="libros">
+      <h2>Libros</h2>
+
+      <form id="form-alta-libro" novalidate>
+        <label for="libro-titulo">Título</label>
+        <input type="text" id="libro-titulo" name="titulo">
+
+        <label for="libro-isbn">ISBN</label>
+        <input type="text" id="libro-isbn" name="isbn">
+
+        <label for="libro-precio">Precio</label>
+        <input type="text" id="libro-precio" name="precio" inputmode="decimal">
+
+        <label for="libro-editorial">Editorial</label>
+        <select id="libro-editorial" name="editorial"></select>
+
+        <label for="libro-genero">Género</label>
+        <select id="libro-genero" name="genero"></select>
+
+        <label for="libro-autores">Autores (selección múltiple)</label>
+        <select id="libro-autores" name="autores" multiple></select>
+
+        <button type="submit">Registrar libro</button>
+      </form>
+
+      <ul id="errores-libro" role="alert" hidden></ul>
+      <p id="mensaje-resultado-libro" hidden></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>ISBN</th>
+            <th>Editorial</th>
+            <th>Género</th>
+            <th>Autores</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody id="listado-libros-registrados"></tbody>
+      </table>
+
+      <p id="mensaje-libros-vacios" hidden></p>
+    </section>
+
+    <section id="clientes">
+      <h2>Clientes</h2>
+
+      <form id="form-alta-cliente" novalidate>
+        <label for="cliente-nombre">Nombre completo</label>
+        <input type="text" id="cliente-nombre" name="nombre">
+
+        <label for="cliente-email">Email</label>
+        <input type="email" id="cliente-email" name="email">
+
+        <button type="submit">Registrar cliente</button>
+      </form>
+
+      <ul id="errores-cliente" role="alert" hidden></ul>
+      <p id="mensaje-resultado-cliente" hidden></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre completo</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="listado-clientes"></tbody>
+      </table>
+
+      <p id="mensaje-clientes-vacios" hidden></p>
+    </section>
+
+    <section id="ventas">
+      <h2>Ventas</h2>
+
+      <label for="select-cliente">Cliente</label>
+      <select id="select-cliente" name="cliente"></select>
+
+      <label for="select-libro-venta">Libro</label>
+      <select id="select-libro-venta" name="libro"></select>
+
+      <label for="input-cantidad-venta">Cantidad</label>
+      <input type="text" id="input-cantidad-venta" name="cantidad" inputmode="numeric">
+
+      <button type="button">Agregar renglón</button>
+
+      <table id="renglones-venta">
+        <thead>
+          <tr>
+            <th>Libro</th>
+            <th>Cantidad</th>
+            <th>Precio unitario</th>
+            <th>Subtotal</th>
+            <th>Quitar renglón</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div id="resumen-venta">
+        <p id="total-venta">Total: 0.00</p>
+        <button type="button">Confirmar venta</button>
+      </div>
+
+      <p id="mensaje-resultado-venta" hidden></p>
+    </section>
+
+    <section id="historial">
+      <h2>Historial</h2>
+
+      <p id="mensaje-historial-vacio" hidden></p>
+
+      <table id="listado-historial">
+        <thead>
+          <tr>
+            <th>Identificador</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Ver detalle</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <section id="detalle-venta">
+        <h3>Detalle de la venta</h3>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Librería del Centro — trabajo de parcial (textos de trabajo editables, PA-07).</p>
+  </footer>
+</body>
+</html>

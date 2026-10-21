@@ -82,7 +82,7 @@ Paso │ Agente A (Frontend)              │ Agente B │ Agente C
 
 ### [C-01] `estructura-y-pantallas-html`
 
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` hecho
 - **Ejercicio**: Ej. 1 — HTML: estructura y pantallas — **20 puntos** (vistas y navegación: 10; semántica, formularios y estados: 10)
 - **Scope**: Estructura HTML de las 5 vistas + navegación clara
   - `index.html` como entrada obligatoria del proyecto (RN-ENT-04, US-001)
