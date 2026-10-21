@@ -133,7 +133,7 @@ Paso │ Agente A (Frontend)              │ Agente B │ Agente C
 
 ### [C-03] `datos-locales-catalogo-filtro`
 
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` hecho
 - **Ejercicio**: Ej. 3 — Datos locales, catálogo y filtro — **15 puntos** (modelo y ejemplos: 5; renderizado: 5; filtro y estados: 5)
 - **Scope**: Seed de datos locales + render del catálogo + filtro por título
   - `js/datos.js`: arrays/objetos con identificadores estables de **libros, editoriales, géneros, autores y clientes** (RN-DAT-01)
