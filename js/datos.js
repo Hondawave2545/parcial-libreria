@@ -37,6 +37,7 @@
     generos: generos,
     autores: autores,
     libros: libros,
+    ventas: [],
     clientes: clientes
   };
 })();

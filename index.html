@@ -137,7 +137,9 @@
       <label class="label" for="input-cantidad-venta">Cantidad</label>
       <input class="input" type="text" id="input-cantidad-venta" name="cantidad" inputmode="numeric">
 
-      <button class="btn btn--secundario" type="button">Agregar renglón</button>
+      <button class="btn btn--secundario" type="button" id="btn-agregar-renglon">Agregar renglón</button>
+
+      <ul class="message message--error" id="errores-venta" role="alert" hidden></ul>
 
       <div class="table-wrapper">
       <table id="renglones-venta">
@@ -156,7 +158,7 @@
 
       <div class="card" id="resumen-venta">
         <p class="card__total" id="total-venta">Total: 0.00</p>
-        <button class="btn btn--secundario" type="button">Confirmar venta</button>
+        <button class="btn btn--secundario" type="button" id="btn-confirmar-venta">Confirmar venta</button>
       </div>
 
       <p class="message message--success" id="mensaje-resultado-venta" hidden></p>
@@ -195,5 +197,7 @@
   <script src="js/datos.js"></script>
   <script src="js/catalogo.js"></script>
   <script src="js/formularios.js"></script>
+  <script src="js/ventas.js"></script>
+  <script src="js/historial.js"></script>
 </body>
 </html>

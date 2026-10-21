@@ -342,4 +342,8 @@ select.input[multiple] {
   .view--acciones > p {
     flex-basis: 100%;
   }
+
+  .view--acciones > .message {
+    flex-basis: 100%;
+  }
 }

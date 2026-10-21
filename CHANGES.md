@@ -187,7 +187,7 @@ Paso │ Agente A (Frontend)              │ Agente B │ Agente C
 
 ### [C-05] `venta-simulada-e-historial`
 
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` hecho
 - **Ejercicio**: Ej. 5 — Venta simulada e historial — **20 puntos** (composición y validaciones: 8; cálculos: 5; confirmación e historial inmutable: 7)
 - **Scope**: Composición de venta, cálculos, confirmación e historial inmutable
   - `js/ventas.js`: selección de un cliente existente y composición de renglones (libro existente + cantidad entera > 0) (RN-VEN-01, US-016)
