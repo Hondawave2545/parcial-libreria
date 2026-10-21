@@ -160,7 +160,7 @@ Paso │ Agente A (Frontend)              │ Agente B │ Agente C
 
 ### [C-04] `alta-libros-y-clientes`
 
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` hecho
 - **Ejercicio**: Ej. 4 — Alta de libros y clientes — **15 puntos** (libros y selectores: 6; clientes: 4; validación y actualización: 5)
 - **Scope**: Formularios de alta de libros y clientes con validación en cliente
   - `js/formularios.js`: alta de **libros** con título, ISBN, precio y relaciones con editorial, género y autores (RN-LIB-01, US-013)

@@ -165,4 +165,11 @@
   } else {
     inicializarCatalogo();
   }
+
+  window.libreriaApp = window.libreriaApp || {};
+  window.libreriaApp.catalogo = {
+    refrescar: function() {
+      manejarBusqueda();
+    }
+  };
 })();
